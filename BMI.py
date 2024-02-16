@@ -12,7 +12,7 @@ height = st.number_input("Enter your height in Meters", step = 0.02)
 
 def calculate_bmi():
     bmi = weight/(height)**2
-    bmi_thresholds = [18.5, 25, 30, 35, 40]
+    bmi_thresholds = [18.5, 25, 30, 35, 40,100]
     level_labels = ['Underweight','Low Risk','Moderate Risk','High Risk','Obese class 1', 'Obese class 2', 'Obese class 3']
     if bmi <= bmi_thresholds[0]:
         level = level_labels[0]
@@ -24,9 +24,14 @@ def calculate_bmi():
         level = level_labels[3]
     elif bmi <= bmi_thresholds[4]:
         level = level_labels[4]
+    elif bmi >= bmi_thresholds[5]:
+        level = level_labels[5]
     else:
         level = level_labels[5]
-    st.success(f"Your BMI is {bmi}. You are at {level}")
+        if level = level_labels[5]:
+        st.error(f"Inhuman Statistics, Value is invalid")
+        else:
+        st.success(f"Your BMI is {bmi}. You are at {level}")
 
 button = st.button("Calculate BMI")
 if button:
