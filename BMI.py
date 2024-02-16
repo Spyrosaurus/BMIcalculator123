@@ -12,7 +12,7 @@ height = st.number_input("Enter your height in Meters", step = 0.02)
 
 def calculate_bmi():
     bmi = weight/(height)**2
-    bmi_thresholds = [18.5, 25, 30, 35, 40, 45]
+    bmi_thresholds = [18.5, 25, 30, 35, 40, 45, 50]
     level_labels = ['Underweight','Low Risk','Moderate Risk','High Risk','Obese class 1', 'Obese class 2', 'Obese class 3', 'Error']
     if bmi <= bmi_thresholds[0]:
         level = level_labels[0]
