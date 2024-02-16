@@ -26,7 +26,7 @@ def calculate_bmi():
         level = level_labels[4]
     else:
         level = level_labels[5]
-    st.success("Your BMI is {bmi}. You are at {level}")
+    st.success(f"Your BMI is {bmi}. You are at {level}")
 
 button = st.button("Calculate BMI")
 if button:
