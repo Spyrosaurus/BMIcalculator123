@@ -14,7 +14,7 @@ st.title("Welocme to BMI calculator")
 
 weight = st.number_input("Enter your weight in KG", step = 0.1)
 
-height = st.number_input("Enter your height in Meters", step = 0.01)
+height = st.number_input("Enter your height in Meters", step = 0.02)
 
 def calculate_bmi():
     bmi = weight/(height)**2
