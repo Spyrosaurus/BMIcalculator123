@@ -1,14 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Mar  7 14:16:50 2023
 
-@author: markwin
-"""
 
 import streamlit as st
 
-st.title("Welocme to BMI calculator")
+st.title("BMI calculator")
 
 #Input
 
@@ -18,16 +12,20 @@ height = st.number_input("Enter your height in Meters", step = 0.02)
 
 def calculate_bmi():
     bmi = weight/(height)**2
-    bmi_thresholds = [18.5, 23, 27.5]
-    level_labels = ['Risk of nutritional deficiency','Low Risk','Moderate Risk','High Risk']
+    bmi_thresholds = [18.5, 25, 30, 35, 40]
+    level_labels = ['Underweight','Low Risk','Moderate Risk','High Risk','Obese class 1', 'Obese class 2', 'Obese class 3']
     if bmi <= bmi_thresholds[0]:
         level = level_labels[0]
     elif bmi <= bmi_thresholds[1]:
         level = level_labels[1]
     elif bmi <= bmi_thresholds[2]:
         level = level_labels[2]
-    else:
+    elif bmi <= bmi_thresholds[3]:
         level = level_labels[3]
+    elif bmi <= bmi_thresholds[;4]:
+        level = level_labels[4]
+    else:
+        level = level_labels[5]
     st. success(f"Your BMI is {bmi}. You are at {level}")
 
 button = st.button("Calculate BMI")
