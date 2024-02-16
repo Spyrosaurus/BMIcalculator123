@@ -22,7 +22,7 @@ def calculate_bmi():
         level = level_labels[2]
     elif bmi <= bmi_thresholds[3]:
         level = level_labels[3]
-    elif bmi <= bmi_thresholds[;4]:
+    elif bmi <= bmi_thresholds[4]:
         level = level_labels[4]
     else:
         level = level_labels[5]
