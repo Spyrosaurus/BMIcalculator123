@@ -31,9 +31,9 @@ def calculate_bmi():
     else:
         level = level_labels[7]
         if level is level_labels[7]:
-        st.error(f"Inhuman Statistics, Value is invalid")
+            st.error(f"Inhuman Statistics, Value is invalid")
         else:
-        st.success(f"Your BMI is {bmi}. You are at {level}")
+            st.success(f"Your BMI is {bmi}. You are at {level}")
 
 button = st.button("Calculate BMI")
 if button:
